@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js', // точка входу
+  entry: './src/index.js', 
   output: {
-    path: path.resolve(__dirname, 'build'), // директорія виходу
-    filename: 'bundle.js', // ім'я бандлу
-    publicPath: '/', // для коректної роботи з devServer
+    path: path.resolve(__dirname, 'build'), 
+    filename: 'bundle.js', 
+    publicPath: '/', 
   },
   mode: 'development',
   module: {
@@ -18,22 +18,22 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/, // для CSS
+        test: /\.css$/, 
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.scss$/, // для SCSS
-        use: ['style-loader', 'css-loader', 'sass-loader'], // використовувати відповідні лоадери
+        test: /\.scss$/, 
+        use: ['style-loader', 'css-loader', 'sass-loader'], 
       },
     ],
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'public'), // директорія для статики
+      directory: path.join(__dirname, 'public'), 
     },
     compress: true,
     port: 5005,
-    open: true, // автоматично відкриває браузер
-    historyApiFallback: true, // для підтримки маршрутизації
+    open: true, 
+    historyApiFallback: true, 
   },
 };

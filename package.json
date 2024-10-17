@@ -9,6 +9,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://fannciful.github.io/task-25-1",
   "keywords": [],
   "author": "",
   "license": "ISC",
