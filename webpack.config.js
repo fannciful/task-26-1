@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'), 
     filename: 'bundle.js', 
-    publicPath: '/', 
+    publicPath: '/task-25-1/',
   },
   mode: 'development',
   module: {
