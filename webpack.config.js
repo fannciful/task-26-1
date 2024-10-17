@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './src/index.js', // точка входу
   output: {
-    path: path.resolve(__dirname, 'dist'), // директорія виходу
+    path: path.resolve(__dirname, 'build'), // директорія виходу
     filename: 'bundle.js', // ім'я бандлу
     publicPath: '/', // для коректної роботи з devServer
   },
