@@ -1,13 +1,14 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js', 
   output: {
     path: path.resolve(__dirname, 'build'), 
     filename: 'bundle.js', 
-    publicPath: '/task-25-1/',
+    publicPath: '/task-25-1/',  // Це важливо для коректного деплою на GitHub Pages
   },
-  mode: 'development',
+  mode: 'production', // Використовуйте production для деплою
   module: {
     rules: [
       {
@@ -27,6 +28,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html', // Використовує ваш шаблон для створення HTML
+    }),
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'), 
