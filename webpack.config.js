@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'), 
     filename: 'bundle.js', 
-    publicPath: '/task-25-1/',  // Це важливо для коректного деплою на GitHub Pages
+    publicPath: '/',  // Це важливо для коректного деплою на GitHub Pages
   },
   mode: 'production', // Використовуйте production для деплою
   module: {
