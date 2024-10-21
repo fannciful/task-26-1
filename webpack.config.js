@@ -30,7 +30,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html', // Використовує ваш шаблон для створення HTML
+      template: './public/index.html', 
     }),
   ],
   devServer: {
